@@ -401,7 +401,7 @@ export default class Graph extends React.Component {
     };
 
     render() {
-        const { nodes, links } = graphRenderer.buildGraph(
+        const { nodes, links, defs } = graphRenderer.buildGraph(
             this.state.nodes,
             {
                 onClickNode: this.onClickNode,
@@ -429,6 +429,7 @@ export default class Graph extends React.Component {
         return (
             <div id={`${this.state.id}-${CONST.GRAPH_WRAPPER_ID}`}>
                 <svg name={`svg-container-${this.state.id}`} style={svgStyle} onClick={this.onClickGraph}>
+                    {defs}
                     <g id={`${this.state.id}-${CONST.GRAPH_CONTAINER_ID}`}>
                         {links}
                         {nodes}
