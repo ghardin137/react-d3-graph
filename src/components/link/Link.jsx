@@ -73,7 +73,7 @@ export default class Link extends React.Component {
 
         return (
             <svg>
-                <path {...lineProps} markerEnd={`url(#${this.props.arrowId})`} />
+                <path {...lineProps} markerEnd={`url(#${this.props.markerId})`} />
             </svg>
         );
     }
